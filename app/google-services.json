@@ -1,0 +1,99 @@
+{
+  "project_info": {
+    "project_number": "1032481441524",
+    "firebase_url": "https://friendlychat-ff8ab.firebaseio.com",
+    "project_id": "friendlychat-ff8ab",
+    "storage_bucket": "friendlychat-ff8ab.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1032481441524:android:b5d75907de594a2d",
+        "android_client_info": {
+          "package_name": "com.google.firebase.codelab.friendlychat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1032481441524-oih1sebfhmleqp4t3ec3e1tr157d3077.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.google.firebase.codelab.friendlychat",
+            "certificate_hash": "c79fc5355e30220567b88ac5ad450bd97319a2d3"
+          }
+        },
+        {
+          "client_id": "1032481441524-1fsj056p1849g625u6tuuu05suqrv208.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5EATOLHS3H5BySJnolkImAHC7qkD-9EE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1032481441524-1fsj056p1849g625u6tuuu05suqrv208.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1032481441524:android:6d4304bf672dd116",
+        "android_client_info": {
+          "package_name": "kulkarni.aditya.firebaserecyclerdemo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1032481441524-vl0md02ppc3pi910be4ij39irjhi23i8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "kulkarni.aditya.firebaserecyclerdemo",
+            "certificate_hash": "c79fc5355e30220567b88ac5ad450bd97319a2d3"
+          }
+        },
+        {
+          "client_id": "1032481441524-1fsj056p1849g625u6tuuu05suqrv208.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5EATOLHS3H5BySJnolkImAHC7qkD-9EE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1032481441524-1fsj056p1849g625u6tuuu05suqrv208.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
