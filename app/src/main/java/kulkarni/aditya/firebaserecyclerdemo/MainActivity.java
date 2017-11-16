@@ -17,6 +17,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.storage.images.FirebaseImageLoader;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -53,7 +54,6 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView mMessageRecyclerView;
     private LinearLayoutManager mLinearLayoutManager;
     private ImageView profileImage;
-    private Uri downloadUrl;
 
 
     public static class CoursesViewHolder extends RecyclerView.ViewHolder {
@@ -74,6 +74,15 @@ public class MainActivity extends AppCompatActivity {
         setReferences();
 
         profileImage = (ImageView) findViewById(R.id.profileImage);
+
+        StorageReference pathReference = storageRef.child("profiles");
+
+        Glide.with(this /* context */)
+                .using(new FirebaseImageLoader())
+                .load(pathReference)
+                .diskCacheStrategy(DiskCacheStrategy.NONE)
+                .skipMemoryCache(true)
+                .into(profileImage);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.floating_action_button);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -148,22 +157,24 @@ public class MainActivity extends AppCompatActivity {
         }).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
             @Override
             public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                downloadUrl = taskSnapshot.getDownloadUrl();
+                Uri downloadUrl = taskSnapshot.getDownloadUrl();
                 Log.d("downloadUrl",String.valueOf(downloadUrl));
                 Toast.makeText(MainActivity.this,"Upload successful !",Toast.LENGTH_SHORT).show();
-                downloadImage(downloadUrl);
+                downloadImage();
             }
         });
     }
 
-    public void downloadImage(Uri downloadUri){
+    public void downloadImage(){
         // Reference to an image file in Firebase Storage
-        StorageReference httpsReference = mFirebaseStorage.getReferenceFromUrl(downloadUri.toString());
+        StorageReference httpsReference = storageRef.child("profiles");
 
         // Load the image using Glide
         Glide.with(this /* context */)
                 .using(new FirebaseImageLoader())
                 .load(httpsReference)
+                .diskCacheStrategy(DiskCacheStrategy.NONE)
+                .skipMemoryCache(true)
                 .into(profileImage);
     }
 }
