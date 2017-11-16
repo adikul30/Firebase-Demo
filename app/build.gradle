@@ -44,7 +44,8 @@ dependencies {
     compile 'com.google.firebase:firebase-analytics:11.6.0'
 
     // Firebase UI
-    compile 'com.firebaseui:firebase-ui-database:0.4.0'
+    compile 'com.firebaseui:firebase-ui-database:1.0.0'
+    compile 'com.firebaseui:firebase-ui-storage:1.0.0'
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
